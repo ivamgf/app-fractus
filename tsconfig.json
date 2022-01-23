@@ -21,7 +21,7 @@
         "**/*.tsx",
         "./jest-setup.ts",
         "jest.config.js",
-        "pages/appMarvel.spec.ts"
+        "src/pages/appMarvel.spec.ts"
     ],
     "exclude": ["node_modules"]
 }
