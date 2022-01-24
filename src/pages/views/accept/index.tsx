@@ -1,18 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
 import HeaderInit from '../../../../lib/components/nav/headerInit'
 import FooterInit from '../../../../lib/components/nav/footerInit'
 import SimpleCard from '../../../../lib/mui/Cards/SimpleCard'
-import Button from '../../../../lib/mui/Buttons/BasicButton'
 
-export default function Accept() {
+export default function Accept() {    
+
     return (
         <div>
             <HeaderInit />
             <Main>                                
-                <SimpleCard value="Objeto de aprendizagem para ensino de frações." textLink="Ler Termos" />
-                <Button text="Avançar" />
+                <SimpleCard value="Objeto de aprendizagem para ensino de frações." textLink="Termos" />
             </Main>            
             <FooterInit />
         </div>
