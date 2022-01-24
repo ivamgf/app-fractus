@@ -4,9 +4,7 @@ import styled from "styled-components";
 export default function Header() {
     return (
         <>
-        <FooterInit>
-            Fractus         
-        </FooterInit>
+        <FooterInit />
         </>        
     )
 }
@@ -18,4 +16,5 @@ const FooterInit = styled.div`
     text-align: center;
     color: #ffffff;
     font-weight: bold;
+    height: 10em;
 `

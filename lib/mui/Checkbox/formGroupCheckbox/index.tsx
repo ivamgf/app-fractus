@@ -7,13 +7,8 @@ export default function CheckboxLabels() {
     return (
         <FormGroup>
             <FormControlLabel
-                control={<Checkbox defaultChecked />}
-                label="Label"
-            />
-            <FormControlLabel
-                disabled
                 control={<Checkbox />}
-                label="Disabled"
+                label="Aceitar Termos de Uso."
             />
         </FormGroup>
     )

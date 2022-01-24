@@ -2,12 +2,10 @@ import * as React from 'react'
 import Stack from '@mui/material/Stack'
 import Button from '@mui/material/Button'
 
-export default function BasicButtons() {
+export default function BasicButtons(props: any) {
     return (
-        <Stack spacing={2} direction="row">
-            <Button variant="text">Text</Button>
-            <Button variant="contained">Contained</Button>
-            <Button variant="outlined">Outlined</Button>
+        <Stack style={{marginTop: "0.5em"}}>
+            <Button variant="contained" disabled>{props.text}</Button>
         </Stack>
     )
 }

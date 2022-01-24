@@ -21,6 +21,7 @@
     align-items: center;
     background-color: #249DD9;
     color: #ffffff;
+    text-align: center;
 }
 
 .footer a {
@@ -54,7 +55,7 @@
 
 .description {
     margin-bottom: 1rem;
-    line-height: 11em;
+    line-height: 10.5em;
     font-size: 1.0rem;
 }
 

@@ -1,6 +1,6 @@
 import React from "react";
-import Header from '../../../lib/components/nav/header'
-import Footer from '../../../lib/components/nav/footer'
+import Header from '../../../../lib/components/nav/header'
+import Footer from '../../../../lib/components/nav/footer'
 
 export default function Home() {
     return (
