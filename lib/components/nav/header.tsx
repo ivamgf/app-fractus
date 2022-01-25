@@ -1,10 +1,10 @@
 import React from "react";
-import Drawer from '../../mui/Drawer'
+import Drawer from "../../mui/Drawer";
 
 export default function Header() {
-    return (
-        <>
-        <Drawer />
-        </>        
-    )
+  return (
+    <>
+      <Drawer />
+    </>
+  );
 }
