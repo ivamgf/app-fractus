@@ -10,6 +10,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import BasicButton from "../../../../lib/mui/Buttons/BasicButton";
+import Cookies from 'universal-cookie';
 
 const bull = (
   <Box
@@ -21,6 +22,11 @@ const bull = (
 );
 
 export default function BasicCard(props: any) {
+  const cookies = new Cookies();
+  const cookieState = cookies.get('cookieState');
+  console.log('cookie:', cookieState)
+  const termState = cookies.get('termState');
+  console.log('term:', termState)
   const [checkedState, setChecked] = useState(false);
   const [checkedValue, setValue] = useState("no");
   const [buttonState, setActive] = useState(true);
@@ -33,6 +39,7 @@ export default function BasicCard(props: any) {
     buttonState
       ? setColor("background: rgba(0, 0, 0, 0.12)")
       : setColor('backgroundColor: "#249DD9"');
+    cookies.set('termState', true, { path: '/' });  
   }
 
   return (

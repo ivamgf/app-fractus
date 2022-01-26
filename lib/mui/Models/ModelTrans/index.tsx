@@ -5,6 +5,9 @@ import Modal from "@mui/material/Modal";
 import Fade from "@mui/material/Fade";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
+import Cookies from 'universal-cookie';
+import IconButton from '../../Buttons/IconButton'
+import Stack from '@mui/material/Stack';
 
 const style = {
   position: "absolute" as "absolute",
@@ -19,20 +22,21 @@ const style = {
 };
 
 export default function TransitionsModal() {
-  const [cookieState, setCookie] = React.useState(false);
+  const cookies = new Cookies();  
+  const cookieState = cookies.get('cookieState');  
   const [open, setOpen] = React.useState(true);
   const handleOpen = () => setOpen(true);
   const handleClose = () => {
     setOpen(false);
-    setCookie(true);
+    cookies.set('cookieState', true, { path: '/' });    
   };
 
-  console.log("CookieState:", cookieState);
+  const handleCookie = async() => await setOpen(false);
 
   return (
     <div>
-      <Button onClick={handleOpen}>Aceitar Cookies</Button>
-      <Modal
+      {!cookieState && <Button onClick={handleOpen}>Aceitar Cookies</Button>}
+      {!cookieState && <Modal
         aria-labelledby="transition-modal-title"
         aria-describedby="transition-modal-description"
         open={open}
@@ -53,16 +57,20 @@ export default function TransitionsModal() {
               aplicativo. Não utilizamos seus dados pessoais em nossos cookies.
             </Typography>
             <br />
-            <Button
-              variant="contained"
-              onClick={handleClose}
-              style={{ backgroundColor: "#249DD9" }}
-            >
-              Aceitar Cookies
-            </Button>
+            <Stack direction="row" spacing={2}>
+              <Button
+                variant="contained"
+                onClick={handleClose}
+                style={{ backgroundColor: "#249DD9" }}
+              >
+                Aceitar Cookies
+              </Button>
+              <IconButton onClick={handleCookie} />
+            </Stack>
+            
           </Box>
         </Fade>
-      </Modal>
+      </Modal>}
     </div>
   );
 }
