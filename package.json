@@ -10,7 +10,7 @@
     "test:watch": "jest --watchAll",
     "prepare": "husky install",
     "precommit": "npm test",
-    "prepush": "npm test"
+    "prepush": "npm run lint"
   },
   "resolutions": {
     "styled-components": "^5"
