@@ -9,6 +9,7 @@ import CheckboxLabels from "../../Checkbox/formGroupCheckbox";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { useRouter } from "next/router";
 import BasicButton from "../../../../lib/mui/Buttons/BasicButton";
 import Cookies from 'universal-cookie';
 
@@ -22,9 +23,9 @@ const bull = (
 );
 
 export default function BasicCard(props: any) {
+  const router = useRouter();
   const cookies = new Cookies();
   const cookieState = cookies.get('cookieState');
-  const termState = cookies.get('termState');
   const [checkedState, setChecked] = useState(false);
   const [checkedValue, setValue] = useState("no");
   const [buttonState, setActive] = useState(true);
@@ -40,6 +41,8 @@ export default function BasicCard(props: any) {
     cookies.set('termState', true, { path: '/' });  
   }
 
+  const redirectHome = async() => await router.push("/views/home/"); 
+  
   return (
     <>
       <Card sx={{ minWidth: 275 }}>
@@ -69,7 +72,7 @@ export default function BasicCard(props: any) {
           </Link>
         </CardActions>
       </Card>
-      <BasicButton text="Avançar" style={buttonColor} disabled={buttonState} />
+      <BasicButton text="Avançar" style={buttonColor} disabled={buttonState} onClick={redirectHome} />
     </>
   );
 }

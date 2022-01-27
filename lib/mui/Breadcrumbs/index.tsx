@@ -5,24 +5,35 @@ import Link from "@mui/material/Link";
 
 function handleClick(event: React.MouseEvent<HTMLDivElement, MouseEvent>) {
   event.preventDefault();
-  console.info("You clicked a breadcrumb.");
+  console.info("Você clicou no Breadcrumb.");
 }
 
-export default function BasicBreadcrumbs() {
+export default function BasicBreadcrumbs(props: any) {
+  const {routes} = props
+
   return (
     <div role="presentation" onClick={handleClick}>
-      <Breadcrumbs aria-label="breadcrumb">
-        <Link underline="hover" color="inherit" href="/">
-          MUI
-        </Link>
-        <Link
-          underline="hover"
-          color="inherit"
-          href="/getting-started/installation/"
-        >
-          Core
-        </Link>
-        <Typography color="text.primary">Breadcrumbs</Typography>
+      <Breadcrumbs aria-label="breadcrumb" style={{marginBottom: "1em", marginTop: "-3em"}}>
+        {routes.route1 &&  
+          <Link underline="hover" color="inherit" href="/">
+            {routes.route1}
+          </Link>
+        }
+
+        {routes.route2 && 
+          <Link
+            underline="hover"
+            color="inherit"
+            href="/getting-started/installation/"
+          >
+            {routes.route2}
+          </Link>
+        }
+        {routes.route3 && 
+          <Typography color="text.primary">
+            {routes.route3}
+          </Typography>
+        }
       </Breadcrumbs>
     </div>
   );

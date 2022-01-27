@@ -15,7 +15,6 @@ const Home: NextPage = () => {
   const router = useRouter();
   const cookies = new Cookies();
   const termState = cookies.get('termState');
-  console.log('terms:', termState);
 
   const redirectHome = async() => await setTimeout(() => { 
     router.push("/views/home/"); 

@@ -1,7 +1,8 @@
+import React from "react";
 import styled from "styled-components";
 
 import HeaderInit from "../../../../lib/components/nav/headerInit";
-import FooterInit from "../../../../lib/components/nav/footerInit";
+import FooterInitComponent from "../../../../lib/components/nav/footerInit";
 import SimpleCard from "../../../../lib/mui/Cards/SimpleCard";
 import ModelTrans from "../../../../lib/mui/Models/ModelTrans";
 
@@ -16,7 +17,7 @@ export default function Accept() {
         />
         <ModelTrans />
       </Main>
-      <FooterInit />
+      <FooterInitComponent />
     </div>
   );
 }
