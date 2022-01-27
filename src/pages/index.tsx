@@ -74,6 +74,7 @@ const Home: NextPage = () => {
 
       <footer className={styles.footer}>
         Powered by{" "}
+
         <span className={styles.logo}>
           <Image
             src="/images/logo-orkneytech.svg"
@@ -82,6 +83,7 @@ const Home: NextPage = () => {
             height={16}
           />
         </span>
+        
       </footer>
     </div>
   );
