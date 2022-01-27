@@ -4,7 +4,6 @@ import styled from "styled-components";
 import HeaderInit from "../../../../lib/components/nav/headerInit";
 import FooterInit from "../../../../lib/components/nav/footerInit";
 import CardAccordion from "../../../../lib/mui/Cards/CardAccordion";
-import Button from "../../../../lib/mui/Buttons/BasicButton";
 
 export default function Terms() {
   return (

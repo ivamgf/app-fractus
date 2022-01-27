@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import styled from "styled-components";
 
 import HeaderInit from "../../../../lib/components/nav/headerInit";
