@@ -16,7 +16,13 @@ import ListItem from "@mui/material/ListItem";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import InboxIcon from "@mui/icons-material/MoveToInbox";
-import MailIcon from "@mui/icons-material/Mail";
+import HomeIcon from '@mui/icons-material/Home';
+import InfoIcon from '@mui/icons-material/Info';
+import PolicyIcon from '@mui/icons-material/Policy';
+import ContactsIcon from '@mui/icons-material/Contacts';
+import ClassIcon from '@mui/icons-material/Class';
+import QuizIcon from '@mui/icons-material/Quiz';
+import Link from "next/link";
 
 const drawerWidth = 240;
 
@@ -85,7 +91,7 @@ export default function PersistentDrawerLeft() {
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
       <AppBar position="fixed" open={open}>
-        <Toolbar>
+        <Toolbar style={{backgroundColor: '#249DD9'}}>
           <IconButton
             color="inherit"
             aria-label="open drawer"
@@ -113,37 +119,125 @@ export default function PersistentDrawerLeft() {
         anchor="left"
         open={open}
       >
-        <DrawerHeader>
+        <DrawerHeader style={{backgroundColor: '#249DD9'}}>
           <IconButton onClick={handleDrawerClose}>
             {theme.direction === "ltr" ? (
-              <ChevronLeftIcon />
+              <ChevronLeftIcon sx={{ color: '#fff' }} />
             ) : (
-              <ChevronRightIcon />
+              <ChevronRightIcon sx={{ color: '#fff' }} />
             )}
           </IconButton>
         </DrawerHeader>
         <Divider />
-        <List>
-          {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
-          ))}
+
+        <List>     
+          <Link href="/views/home/">
+            <ListItem>            
+                <ListItemIcon>
+                  <HomeIcon style={{color: '#249DD9'}} />
+                </ListItemIcon>
+                <ListItemText>
+                  <span style={{color: '#249DD9'}}>Início</span>
+                </ListItemText>              
+              </ListItem> 
+          </Link>                     
         </List>
+
+        <List>
+          <Link href="/views/about/">          
+            <ListItem>
+              <ListItemIcon>
+                <InfoIcon style={{color: '#249DD9'}} />
+              </ListItemIcon>
+              <ListItemText style={{color: '#249DD9'}}>
+                Sobre
+              </ListItemText>             
+            </ListItem> 
+          </Link>        
+        </List>
+
+        <List> 
+          <Link href="/views/terms/">          
+            <ListItem>
+              <ListItemIcon>
+                <PolicyIcon style={{color: '#249DD9'}} />
+              </ListItemIcon>
+              <ListItemText style={{color: '#249DD9'}}>
+                Termos
+              </ListItemText>             
+            </ListItem>  
+          </Link>          
+        </List>
+
         <Divider />
-        <List>
-          {["All mail", "Trash", "Spam"].map((text, index) => (
-            <ListItem button key={text}>
+
+        <List> 
+          <Link href="/classes/class/">         
+            <ListItem>
               <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                <ClassIcon style={{color: '#249DD9'}} />
               </ListItemIcon>
-              <ListItemText primary={text} />
+              <ListItemText style={{color: '#249DD9'}}>
+                Aulas
+              </ListItemText>              
             </ListItem>
-          ))}
+          </Link>           
         </List>
+
+        <List>
+          <Link href="/contents/texts">          
+            <ListItem>
+              <ListItemIcon>
+                <InboxIcon style={{color: '#249DD9'}} />
+              </ListItemIcon>
+              <ListItemText style={{color: '#249DD9'}}>
+                Textos
+              </ListItemText>             
+            </ListItem> 
+          </Link>         
+        </List>
+
+        <List>
+          <Link href="/contents/exercises">          
+            <ListItem>
+              <ListItemIcon>
+                <QuizIcon style={{color: '#249DD9'}} />
+              </ListItemIcon>
+              <ListItemText style={{color: '#249DD9'}}>
+                Exercícios
+              </ListItemText>             
+            </ListItem>
+          </Link>          
+        </List>
+
+        <Divider />
+
+        <List> 
+          <Link href="/views/help/">         
+            <ListItem>
+              <ListItemIcon>
+                <InboxIcon style={{color: '#249DD9'}} />
+              </ListItemIcon>
+              <ListItemText style={{color: '#249DD9'}}>
+                Ajuda
+              </ListItemText>              
+            </ListItem>
+          </Link>          
+        </List>
+
+        <List> 
+          <Link href="/views/contact/">         
+            <ListItem>
+              <ListItemIcon>
+                <ContactsIcon style={{color: '#249DD9'}} />
+              </ListItemIcon>
+              <ListItemText style={{color: '#249DD9'}}>
+                Contatos
+              </ListItemText>             
+            </ListItem>  
+          </Link>        
+        </List>
+
       </Drawer>
       <Main open={open}>
         <DrawerHeader />

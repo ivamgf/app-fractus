@@ -8,7 +8,7 @@ export default function BasicButtons(props: any) {
 
   return (
     <Stack style={{ marginTop: "0.5em" }}>
-      <Button variant="contained" disabled={buttonState} style={{ color }}>
+      <Button variant="contained" disabled={buttonState} style={{ color }} onClick={props.onClick}>
         {props.text}
       </Button>
     </Stack>

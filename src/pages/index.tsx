@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import styles from "../styles/Home.module.css";
 import HeaderInit from "../../lib/components/nav/headerInit";
+import Cookies from 'universal-cookie';
 
 import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
@@ -12,11 +13,19 @@ import "@fontsource/roboto/700.css";
 
 const Home: NextPage = () => {
   const router = useRouter();
+  const cookies = new Cookies();
+  const termState = cookies.get('termState');
+
+  const redirectHome = async() => await setTimeout(() => { 
+    router.push("/views/home/"); 
+  }, 3000);
+  
+  const redirectAccept = async() => setTimeout(() => {
+    router.push("/views/accept/");
+  }, 3000);
 
   function redirect() {
-    setTimeout(() => {
-      router.push("/views/accept/");
-    }, 3000);
+    termState ? redirectHome() : redirectAccept();
   }
 
   redirect();
@@ -65,6 +74,7 @@ const Home: NextPage = () => {
 
       <footer className={styles.footer}>
         Powered by{" "}
+
         <span className={styles.logo}>
           <Image
             src="/images/logo-orkneytech.svg"
@@ -73,6 +83,7 @@ const Home: NextPage = () => {
             height={16}
           />
         </span>
+        
       </footer>
     </div>
   );
