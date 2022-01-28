@@ -41,8 +41,7 @@ export default function FooterComponent() {
           </Link>  
             
           </Stack>
-        }
-                
+        }        
       </Footer>
     </>
   );
