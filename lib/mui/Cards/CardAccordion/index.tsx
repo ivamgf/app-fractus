@@ -8,6 +8,8 @@ import Image from "next/image";
 import BasicAccordion from "../../Accordions/BasicAccordion";
 import Link from "next/link";
 import fields from "../../../../src/utils/termsAccordion";
+import Typography from "@mui/material/Typography";
+import Cookies from 'universal-cookie';
 
 const bull = (
   <Box
@@ -19,17 +21,27 @@ const bull = (
 );
 
 export default function BasicCard(props: any) {
+  const cookies = new Cookies();
+  const termState = cookies.get('termState');
+  const termsRoute = termState ? "/views/home/" : "/views/accept/";
+  console.log(props)
+
   return (
     <Card sx={{ minWidth: 275 }}>
       <CardContent style={{ minHeight: "15em" }}>
-        <Image
-          src="/images/logo-fractus-cor.svg"
-          alt="Logo Fractus"
-          width={500}
-          height={150}
-        />
-        <div style={{ textAlign: "center", marginTop: "2em" }}>
-          {props.value}
+        <Typography
+            variant="body2"
+            style={{ textAlign: "center" }}
+          >
+          <Image
+            src="/favicon.ico"
+            alt="Logo Fractus"
+            width={25}
+            height={25}
+          />
+          <span style={{fontSize: "2em", marginLeft: "0.3em"}}>{props.value}</span>
+        </Typography>
+        <div style={{ textAlign: "center", marginTop: "2em" }}>          
           <BasicAccordion
             title1={fields.title1}
             text1={fields.text1}
@@ -54,7 +66,7 @@ export default function BasicCard(props: any) {
       </CardContent>
       <hr />
       <CardActions>
-        <Link href="/views/accept/">
+        <Link href={termsRoute}>
           <Button
             variant="contained"
             size="small"
