@@ -8,7 +8,7 @@ function handleClick(event: React.MouseEvent<HTMLDivElement, MouseEvent>) {
   console.info("Você clicou no Breadcrumb.");
 }
 
-export default function BasicBreadcrumbs(props: any) {
+export default function BasicBreadcrumbs(props: IRoutes): JSX.Element {
   const {routes} = props
 
   return (

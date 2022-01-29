@@ -2,7 +2,20 @@ import * as React from "react";
 import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
 
-export default function BasicButtons(props: any) {
+type TypeButton = {
+  disabled?: boolean,
+  onClick?: any,
+  style?: string,
+  color?: string,
+  text: string
+  href?: string,
+  children?: string,
+  variant?: string,
+  classes?: string,
+  buttons?: string
+};
+
+export default function BasicButtons(props: TypeButton): JSX.Element {
   const color = props.style;
   const buttonState = props.disabled;
 

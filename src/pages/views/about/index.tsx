@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import Header from "../../../../lib/components/nav/header";
-import BasicCard from '../../../../lib/mui/Cards/BasicCard/BasicCard'
+import BasicCard from '../../../../lib/mui/Cards/BasicCard'
 import Breadcrumbs from '../../../../lib/mui/Breadcrumbs';
 import FooterComponent from "../../../../lib/components/nav/footer";
 import contentCards from '../../../utils/contentsCards'
