@@ -21,7 +21,7 @@ const style = {
   p: 4,
 };
 
-export default function TransitionsModal() {
+export default function TransitionsModal(props: TypeButton) {
   const cookies = new Cookies();  
   const cookieState = cookies.get('cookieState');  
   const [open, setOpen] = React.useState(true);
