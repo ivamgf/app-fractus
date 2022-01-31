@@ -5,7 +5,7 @@ import FormControlLabel from "@mui/material/FormControlLabel";
 import FormControl from "@mui/material/FormControl";
 import FormLabel from "@mui/material/FormLabel";
 
-export default function RadioButtonsGroup(props: any) {
+export default function RadioButtonsGroup() {
   return (
     <FormControl>
       <FormLabel id="demo-radio-buttons-group-label"></FormLabel>

@@ -1,3 +1,4 @@
+import React  from 'react';
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
@@ -11,6 +12,7 @@ import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 
+/*eslint-disable */
 const Home: NextPage = () => {
   const router = useRouter();
   const cookies = new Cookies();
@@ -88,3 +90,4 @@ const Home: NextPage = () => {
 };
 
 export default Home;
+/*eslint-disable */

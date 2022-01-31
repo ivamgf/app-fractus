@@ -24,6 +24,7 @@ import ClassIcon from '@mui/icons-material/Class';
 import QuizIcon from '@mui/icons-material/Quiz';
 import Link from "next/link";
 
+/*eslint-disable */
 const drawerWidth = 240;
 
 const Main = styled("main", { shouldForwardProp: (prop) => prop !== "open" })<{
@@ -245,3 +246,4 @@ export default function PersistentDrawerLeft() {
     </Box>
   );
 }
+/*eslint-disable */

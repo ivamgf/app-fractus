@@ -1,7 +1,7 @@
 
 interface ITerms {
-    title1: string,
-    text1: string,
+    title1?: string,
+    text1?: string,
     title2?: string,
     text2?: string,
     title3?: string,
@@ -18,4 +18,6 @@ interface ITerms {
     text8?: string,
     title9?: string,
     text9?: string,
+    value?: string,
+    textLink?: string
   };

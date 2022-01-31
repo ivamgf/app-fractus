@@ -9,6 +9,7 @@ import Cookies from 'universal-cookie';
 import IconButton from '../../Buttons/IconButton'
 import Stack from '@mui/material/Stack';
 
+/*eslint-disable */
 const style = {
   position: "absolute" as "absolute",
   top: "50%",
@@ -20,8 +21,9 @@ const style = {
   boxShadow: 24,
   p: 4,
 };
+/*eslint-disable */
 
-export default function TransitionsModal(props: TypeButton) {
+export default function TransitionsModal() {
   const cookies = new Cookies();  
   const cookieState = cookies.get('cookieState');  
   const [open, setOpen] = React.useState(true);

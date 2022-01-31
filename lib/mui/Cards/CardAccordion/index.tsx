@@ -10,12 +10,12 @@ import fields from "../../../../src/utils/termsAccordion";
 import Typography from "@mui/material/Typography";
 import Cookies from 'universal-cookie';
 
-export default function BasicCard(props: any) {
+/*eslint-disable */
+export default function BasicCard(props: ITerms) {
   const cookies = new Cookies();
   const termState = cookies.get('termState');
   const termsRoute = termState ? "/views/home/" : "/views/accept/";
-  console.log(props)
-
+  
   return (
     <Card sx={{ minWidth: 275 }}>
       <CardContent style={{ minHeight: "15em" }}>
@@ -69,3 +69,4 @@ export default function BasicCard(props: any) {
     </Card>
   );
 }
+/*eslint-disable */

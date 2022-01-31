@@ -8,6 +8,7 @@ import MuiAccordionSummary, {
 import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 
+/*eslint-disable */
 const Accordion = styled((props: AccordionProps) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
 ))(({ theme }) => ({
@@ -105,3 +106,4 @@ export default function CustomizedAccordions() {
     </div>
   );
 }
+/*eslint-disable */

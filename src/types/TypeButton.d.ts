@@ -8,6 +8,8 @@ type TypeButton = {
     children?: string,
     variant?: string,
     classes?: string,
-    buttons?: string
+    buttons?: string,
+    value?: string,
+    textLink?: string
   };
   

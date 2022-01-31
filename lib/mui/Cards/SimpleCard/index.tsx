@@ -12,7 +12,8 @@ import { useRouter } from "next/router";
 import BasicButton from "../../../../lib/mui/Buttons/BasicButton";
 import Cookies from 'universal-cookie';
 
-export default function BasicCard(props: any) {
+/*eslint-disable */
+export default function BasicCard(props: TypeButton) {
   const router = useRouter();
   const cookies = new Cookies();
   const cookieState = cookies.get('cookieState');
@@ -28,7 +29,7 @@ export default function BasicCard(props: any) {
     buttonState
       ? setColor("background: rgba(0, 0, 0, 0.12)")
       : setColor('backgroundColor: "#249DD9"');
-    cookies.set('termState', true, { path: '/' });  
+      cookieState ? cookies.set('termState', true, { path: '/' }) : cookies.set('termState', false, { path: '/' });  
   }
 
   const redirectHome = async() => await router.push("/views/home/"); 
@@ -66,3 +67,4 @@ export default function BasicCard(props: any) {
     </>
   );
 }
+/*eslint-disable */

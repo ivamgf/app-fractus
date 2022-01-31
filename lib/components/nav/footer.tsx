@@ -9,9 +9,15 @@ import ContactsIcon from '@mui/icons-material/Contacts';
 import Link from "next/link";
 import Cookies from 'universal-cookie';
 
+/*eslint-disable */
 export default function FooterComponent() {
   const cookies = new Cookies();
   const termState = cookies.get('termState');
+  const homeLink = "/views/home/";
+  const aboutLink = "/views/about/";
+  const termsLink = "/views/terms/";
+  const urlLink = "";
+  const contactLink = "/views/contact/";
 
   return (
     <>
@@ -20,23 +26,23 @@ export default function FooterComponent() {
           termState && 
           <Stack style={{ marginTop: "0.5em" }} direction="row" spacing={5}>
         
-          <Link href="/views/home/">
+          <Link href={homeLink}>
             <HomeIcon />
           </Link>
 
-          <Link href="/views/about/">
+          <Link href={aboutLink}>
             <InfoIcon />
           </Link> 
 
-          <Link href="/views/terms/">
+          <Link href={termsLink}>
             <PolicyIcon />
           </Link>
 
-          <Link href="">
+          <Link href={urlLink}>
             <PublicIcon />
           </Link>   
             
-          <Link href="/views/contact/">
+          <Link href={contactLink}>
             <ContactsIcon />
           </Link>  
             
@@ -57,3 +63,4 @@ const Footer = styled.div`
   font-weight: bold;
   height: 10em;
 `;
+/*eslint-disable */

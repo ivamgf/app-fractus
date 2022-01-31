@@ -5,7 +5,11 @@ import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import Image from "next/image";
 
-export default function BasicCard(props: any) {
+type typeProps = {
+  value: string
+}
+
+export default function BasicCard(props: typeProps) {
   
   return (
     <>

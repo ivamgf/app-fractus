@@ -5,14 +5,17 @@ import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import Image from "next/image";
 import BasicButton from "../../Buttons/BasicButton";
-import Link from "next/link";
+import { useRouter } from "next/router";
 
-
+/*eslint-disable */
 export default function BasicCard(props: any) {
+  const router = useRouter();
   const contentCard = props.value
   const buttons = props.buttons
   const buttonColor = 'backgroundColor: "#249DD9"'
 
+  const redirectHome = async() => await router.push("/views/home/"); 
+ 
   return (
     <>
       <Card sx={{ minWidth: 275 }}>
@@ -44,12 +47,12 @@ export default function BasicCard(props: any) {
           </Typography>
         </CardContent>
         <hr />
-        <CardActions>
-        <Link href="/views/home/">
-          <BasicButton text={buttons.value} style={buttonColor} />
-        </Link>          
+        <CardActions>        
+          <BasicButton text={buttons.value} style={buttonColor} onClick={redirectHome} />                  
         </CardActions>
       </Card>      
     </>
   );
 }
+
+/*eslint-disable */
