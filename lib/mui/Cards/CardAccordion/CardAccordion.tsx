@@ -10,6 +10,8 @@ import Typography from "@mui/material/Typography";
 
 export default function BasicCard(props: any) {
     const help = contentHelp.content.help
+    const contentCard =  contentHelp.content
+    const buttons = contentHelp.children.buttons
     console.log(help)
     
   return (
@@ -25,9 +27,9 @@ export default function BasicCard(props: any) {
             width={25}
             height={25}
           />
-          <span style={{fontSize: "2em", marginLeft: "0.3em"}}>{props.value}</span>
+          <span style={{fontSize: "2em", marginLeft: "0.3em"}}>{contentCard.title}</span>
         </Typography>
-        <div style={{ textAlign: "center", marginTop: "2em" }}>          
+        <div style={{ textAlign: "left", marginTop: "2em" }}>          
           <BasicAccordion
             title1={help.title1}
             text1={help.text1}
@@ -53,7 +55,7 @@ export default function BasicCard(props: any) {
             size="small"
             style={{ backgroundColor: "#249DD9" }}
           >
-            {props.textLink}
+            {buttons.value}
           </Button>       
       </CardActions>
     </Card>

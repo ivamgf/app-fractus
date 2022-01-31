@@ -10,7 +10,7 @@ export default function Help() {
 
   const routes = {
     route1: 'Início',
-    route2: 'Termos',
+    route2: 'Ajuda',
     route3: ''
   }
 
