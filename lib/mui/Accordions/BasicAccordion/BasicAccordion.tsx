@@ -5,7 +5,24 @@ import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
-export default function SimpleAccordion(props: any): JSX.Element {  
+type THelp = {
+  title1?: string,
+  text1?: string,
+  title2?: string,
+  text2?: string,
+  title3?: string,
+  text3?: string,
+  title4?: string,
+  text4?: string,
+  title5?: string,
+  text5?: string,
+  title6?: string,
+  text6?: string,
+  title7?: string,
+  text7?: string
+}
+
+export default function SimpleAccordion(props: THelp) {  
   const content = props;
 
   return (

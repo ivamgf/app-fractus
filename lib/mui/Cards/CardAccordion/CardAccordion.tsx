@@ -1,18 +1,21 @@
 import * as React from "react";
+import { useRouter } from "next/router";
+
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Image from "next/image";
 import BasicAccordion from "../../Accordions/BasicAccordion/BasicAccordion";
-import contentHelp from "../../../../src/utils/contentHelp";
 import Typography from "@mui/material/Typography";
 
-export default function BasicCard(props: any) {
-    const help = contentHelp.content.help
-    const contentCard =  contentHelp.content
-    const buttons = contentHelp.children.buttons
-    console.log(help)
+export default function BasicCard(props: IHelp) {
+  const router = useRouter();
+  const buttons = props.buttonsProps
+  const contentCard = props.contentCard
+  const help = props.help  
+
+  const redirectHome = async() => await router.push("/views/home/");
     
   return (
     <Card sx={{ minWidth: 275 }}>
@@ -54,6 +57,7 @@ export default function BasicCard(props: any) {
             variant="contained"
             size="small"
             style={{ backgroundColor: "#249DD9" }}
+            onClick={redirectHome}
           >
             {buttons.value}
           </Button>       

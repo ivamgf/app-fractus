@@ -3,8 +3,9 @@ const contentHelp = {
     content: {
         title: 'Ajuda',
         Image: '',
-        description: '',
-        help: {
+        description: '',        
+      },
+      help: {
             title1: 'O que é o Fractus?',
             text1: 'Fractus é um objeto de aprendizagem para ensino de frações. O aplicativo está disponível para desktop e mobile.',
             title2: 'O que é um objeto de aprendizagem?',
@@ -24,12 +25,11 @@ const contentHelp = {
             text6: 'Vá até a página de exercícios, escolha a lista de sua preferência e clique em baixar. Será realizado então o download do arquivo.',
             title7: 'O Fractus armazena meus dados?',
             text7: 'Somente dados relacionados à navegação, como a aceitação de termos de uso. Os seus dados pessoais não serão armazenados.'
-        }
-      },
+        },
       children: {
         routes: {
             route1: 'Início',
-            route2: 'Sobre',
+            route2: 'Ajuda',
             route3: '',
             routeUrl: '/favicon.ico'
         },
