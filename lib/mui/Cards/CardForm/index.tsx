@@ -20,16 +20,16 @@ export default function CardForm(props: any) {
     <>
       <Card sx={{ minWidth: 275 }}>
         <CardContent style={{ minHeight: "20em" }}>
-          <Image
-            src="/favicon.ico"
-            alt="Logo Fractus"
-            width={25}
-            height={25}
-          />
-          <Typography
+        <Typography
             variant="body2"
-            style={{ textAlign: "center", marginTop: "4em" }}
+            style={{ textAlign: "center" }}
           >
+            <Image
+              src="/favicon.ico"
+              alt="Logo Fractus"
+              width={25}
+              height={25}
+            />          
             <span style={{fontSize: "2em", marginLeft: "0.3em"}}>{content.title}</span>
           </Typography>
         </CardContent>
@@ -45,7 +45,7 @@ export default function CardForm(props: any) {
             <Button
                 variant="contained"
                 size="small"
-                style={{ backgroundColor: "#249DD9" }}
+                style={{ backgroundColor: "#249DD9", position: "absolute", right: "2em" }}
                 onClick={redirectHome}
             >
                 {buttonSend.value}

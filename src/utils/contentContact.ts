@@ -2,7 +2,7 @@
 
 const contentContact = {
     content: {
-        title: 'Ajuda',
+        title: 'Contatos',
         Image: '',
         description: '',        
       },      

@@ -22,6 +22,7 @@
   background-color: #249dd9;
   color: #ffffff;
   text-align: center;
+  min-height: auto;
 }
 
 .footer a {
