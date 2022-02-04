@@ -29,7 +29,6 @@ export default function CardForm(props: IContact) {
         setOpen(true)
         redirectSend()
     }
-    console.log(open)
 
     return (
         <>

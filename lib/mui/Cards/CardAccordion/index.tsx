@@ -6,7 +6,7 @@ import Button from '@mui/material/Button'
 import Image from 'next/image'
 import BasicAccordion from '../../Accordions/BasicAccordion'
 import Link from 'next/link'
-import fields from '../../../../src/utils/termsAccordion'
+import fields from '../../../../src/utils/jsons/termsAccordion'
 import Typography from '@mui/material/Typography'
 import Cookies from 'universal-cookie'
 

@@ -5,7 +5,7 @@ import Header from '../../../../lib/components/nav/header'
 import FooterComponent from '../../../../lib/components/nav/footer'
 import CardAccordion from '../../../../lib/mui/Cards/CardAccordion/CardAccordion'
 import Breadcrumbs from '../../../../lib/mui/Breadcrumbs'
-import contentHelp from '../../../../src/utils/contentHelp'
+import contentHelp from '../../../../src/utils/jsons/contentHelp'
 
 export default function Help() {
     const help = contentHelp.help
