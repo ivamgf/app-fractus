@@ -38,9 +38,30 @@ const Home: NextPage = () => {
         <div className={styles.container}>
             <Head>
                 <title>Fractus App</title>
+                <script src="/serviceWorker.js"></script>
                 <meta
                     name="description"
                     content="Objeto de aprendizagem para ensino de frações"
+                />
+                <meta
+                  content='yes'
+                  name='apple-mobile-web-app-capable'
+                />
+                <meta
+                  content='yes'
+                  name='mobile-web-app-capable'
+                />
+                <meta
+                  name='mobile-web-app-status-bar'
+                  content='#249DD9'
+                />
+                <meta
+                  name='theme-color'
+                  content='#249DD9'
+                />
+                <link
+                  rel="manifest"
+                  href="/manifest.webmanifest"
                 />
                 <link
                     rel="stylesheet"
@@ -51,6 +72,7 @@ const Home: NextPage = () => {
                     href="https://fonts.googleapis.com/icon?family=Material+Icons"
                 />
                 <link rel="icon" href="/favicon.ico" />
+                <link rel="apple-touch-icon" href="/favicon.ico" />
             </Head>
 
             <HeaderInit />

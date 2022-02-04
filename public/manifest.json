@@ -1,0 +1,25 @@
+{
+  "name": "app-fractus",
+  "short_name": "Fractus App",
+  "icons": [
+    {
+      "src": "assets/logos/logo-fractus-cor.svg",
+      "sizes": "1290x1000",
+      "type": "image/svg"
+    },
+    {
+      "src": "assets/logos/logo-orkneytech.svg",
+      "sizes": "531x408",
+      "type": "image/svg"
+    },
+    {
+      "src": "favicon.ico",
+      "sizes": "48x48",
+      "type": "image/ico"
+    }
+  ],
+  "start_url": "/app-fractus/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#249DD9"
+}
