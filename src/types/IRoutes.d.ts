@@ -1,9 +1,8 @@
-
 interface IRoutes {
     routes: {
-        route1: string,
-        route2: string,
-        route3: string,
+        route1: string
+        route2: string
+        route3: string
         routeUrl?: string
     }
 }
